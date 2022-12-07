@@ -19,13 +19,7 @@ def nameFile(instance, filename):
     return 'uploads/{filename}'.format(filename=filename)
 
 
-class Grades(models.Model):
-    user_id = models.IntegerField(_('user_id'),default=0)
-    subject_id = models.IntegerField(_('subject_id'),default=0)
-    score = models.IntegerField(_('score'),default=0)
-    grade_type=models.CharField(_('grade_type'),max_length=255,blank=True,null=True)
-    description=models.CharField(_('description'),max_length=255,blank=True,null=True)
+class Settings(models.Model):
     quarter=models.CharField(_('quarter'),max_length=255,blank=True,null=True)
-    date_submitted=models.DateTimeField(_('date_submitted'), null=False,blank=False,default=timezone.now)
     class Meta:
         ordering = ["-id"]

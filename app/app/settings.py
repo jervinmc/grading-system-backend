@@ -62,6 +62,7 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'rest_framework_simplejwt.token_blacklist',
     'users',
+    'settings',
     'enrolled'
 ]
 CORS_ALLOW_ALL_ORIGINS = True
